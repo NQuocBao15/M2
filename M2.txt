@@ -1,0 +1,96 @@
+Trong Java, Nested class (lớp lồng nhau) là một lớp được khai báo bên trong một lớp khác. Nested class có thể được khai
+báo như một thành viên của lớp bao ngoài hoặc bên trong một phương thức của lớp bao ngoài.
+
+Có 4 loại nested class trong Java:
+
+Inner class: là nested class bên trong một lớp khác và có thể truy cập vào các thành viên (fields, methods) của lớp bao ngoài,
+ bao gồm cả các thành viên private.
+
+Local class: là nested class được khai báo bên trong một phương thức và
+có thể truy cập các biến cục bộ của phương thức đó.
+
+Anonymous class: là một loại lớp không có tên được khai báo và tạo ra một đối tượng ngay tại chỗ.
+Anonymous class thường được sử dụng để triển khai các interface hoặc lớp abstract.
+
+Static nested class: là nested class tĩnh và có thể được truy cập bằng cách sử dụng tên của lớp bao ngoài.
+
+
+
+
+- Biến instance
+_Biến instance là các biến bên trong một lớp nhưng bên ngoài bất cứ phương thức nào. Những biến này được thuyết minh khi lớp được tải.
++Biến instance được khai báo trong một lớp(class), bên ngoài các phương thức, constructor và các block.
++Biến instance được lưu trong bộ nhớ heap.
++Biến instance được tạo khi một đối tượng được tạo bằng việc sử dụng từ khóa “new” và sẽ bị phá hủy khi đối tượng bị phá hủy.
++Biến instance có thể được sử dụng bởi các phương thức, constructor, block, … Nhưng nó phải được sử dụng thông qua một đối tượng cụ thể.
++Bạn được phép sử dụng “access modifier” khi khai báo biến instance, mặc định là “default”.
++Biến instance có giá trị mặc định phụ thuộc vào kiểu dữ liệu của nó. Ví dụ nếu là kiểu int, short, byte thì giá trị mặc định là 0, kiểu double thì là 0.0d,
+… Vì vậy, bạn sẽ không cần khởi tạo giá trị cho biến instance trước khi sử dụng.
++Bên trong class mà bạn khai báo biến instance, bạn có thể gọi nó trực tiếp bằng tên khi sử dụng ở khắp nới bên trong class đó.
+
+VD:
+public class Student {
+    private String name;
+    private int age;
+
+    public Student(String name) {
+        this.name = name;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public void showStudent() {
+        System.out.println("Ten  : " + name);
+        System.out.println("Tuoi : " + age);
+    }
+
+    public static void main(String args[]) {
+        Student student = new Student("Nguyen Van A");
+        student.setAge(21);
+        student.showStudent();
+    }
+}
+
+
+_Biến static
++Được gọi là biến tĩnh
++Được sử dụng để tham chiếu thuộc tính chung của tất cả đối tượng thuộc một lớp(mà không là duy nhất cho mỗi đối tượng)
++Biến static lấy bộ nhớ chỉ một lần trong Class Area tại thời gian tải lớp đó
++Biến static giúp tiết kiệm bộ nhớ
+
+VD:
+public class Student {
+    private static String name = "Nguyen Van A";
+
+    private static int age = 21;
+
+    public static void main(String args[]) {
+        System.out.println("Ten : " + name);
+
+        System.out.println("Tuoi : " + Student.age);
+    }
+}
+
+
+- Biến local trong java
++Biến local được khai báo trong các phương thức, hàm contructor hoặc trong các block.
++Biến local được tạo bên trong các phương thức, contructor, block và sẽ bị phá hủy khi kết thúc các phương thức, contructor và block.
++Không được sử dụng "access modifier" khi khai báo biến local.
++Các biến local được lưu trên vùng nhớ stack của bộ nhớ.
++Cần phải khởi tạo giá trị mặc định cho biến local trước khi có thể sử dụng.
+
+VD:
+public class Bien {
+
+    public void sayHello() {
+        int n = 10;    // Đây là biến local
+        System.out.println("Gia tri cua n la: " + n);
+    }
+
+    public static void main(String[] args) {
+        Bien bienLocal = new Bien();
+        bienLocal.sayHello();
+    }
+}
