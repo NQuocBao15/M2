@@ -112,3 +112,42 @@ public class Vidu {
         System.out.println("Bonus of Programmer is: " + p.bonus);
     }
 }
+
+Tính đa hình trong kế thừa: là khả năng của một đối tượng của một lớp kế thừa (subclass) để
+thể hiện một cách khác nhau các phương thức được kế thừa từ lớp cha (superclass) của nó.
+Nó cho phép một đối tượng của một lớp con có thể được truy cập và sử dụng như một đối tượng
+của lớp cha, hoặc như một đối tượng của lớp con của lớp cha đó.
+
+Cách sử dụng:
+public class Shape {
+    public void draw() {
+        System.out.println("Drawing a Shape");
+    }
+}
+
+public class Circle extends Shape {
+    @Override
+    public void draw() {
+        System.out.println("Drawing a Circle");
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        Shape s = new Circle();
+        s.draw();
+    }
+}
+
+Override là 1 tính năng cho phép lớp con ghi đè phương thức của lớp cha.
+Nếu 1 phương thức của lớp cha được ghi đè trong lớp con, và khi gọi phương thức đó ở
+lớp con thì phương thức ở lớp con sẽ được gọi thay vì pthức của lớp cha.
+
+Overloading (tạm dịch là nạp chồng phương thức) là một tính năng trong Java cho phép
+một lớp có thể có nhiều phương thức cùng tên nhưng khác nhau về số lượng và kiểu đối số.
+Khi một phương thức được gọi, trình biên dịch sẽ xác định phương thức thích hợp
+để gọi dựa trên số lượng và kiểu đối số được cung cấp.
+
+Biến final: bạn không thể thay đổi giá trị của biến final (nó sẽ là hằng số).
+Phương thức final: bạn không thể ghi đè phương thức final.
+Lớp final: bạn không thể kế thừa lớp final.
+Biến static final trống: Một biến final mà không được khởi tạo tại thời điểm khai báo được gọi là biến final trống.
