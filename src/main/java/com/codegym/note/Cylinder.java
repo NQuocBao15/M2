@@ -1,4 +1,4 @@
-package com.codegym.cylinder;
+package com.codegym.note;
 
 public class Cylinder extends Circle{
 
