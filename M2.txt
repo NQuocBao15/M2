@@ -150,4 +150,49 @@ Khi một phương thức được gọi, trình biên dịch sẽ xác định 
 Biến final: bạn không thể thay đổi giá trị của biến final (nó sẽ là hằng số).
 Phương thức final: bạn không thể ghi đè phương thức final.
 Lớp final: bạn không thể kế thừa lớp final.
-Biến static final trống: Một biến final mà không được khởi tạo tại thời điểm khai báo được gọi là biến final trống.
+Biến static final trống: Một biến final mà khôg được khởi tạo tại thời điểm khai báo được gọi là biến final trống.
+
+----20/3/2023----
+_Vì sao trong Java không cho đa kế thừa
+không cho phép đa kế thừa bởi vì nó có thể dẫn đến các vấn đề phức tạp về tính đồng nhất
+và đa nghĩa trong mã nguồn, và làm cho việc quản lý mã nguồn trở nên khó khăn hơn.
+
+_Lớp abstract là gì, phương thức abstract là gì. Khi nào sử dụng lớp abstract
+abstract class là một lớp chứa phương thức trừu tượng, các class khi kế thừa một abstract class sẽ phải
+định nghĩa lại các phương thức trừu tượng trong abstract class. và không thể khởi tạo đối tượng trực tiếp
+
+phương thức abstract class là không được phép khai báo nội dung phương thức, chỉ có thể định nghĩa tên và
+các tham số đầu vào.
+
+Khi một nhóm đối tượng có cùng bản chất kế thừa từ một class thì sử dụng abstract class
+
+_Các tính chất của lớp abstract
++Có thể chứa các phương thức trừu tượng, các phương thức này chỉ có khai báo mà không có phần thân hàm.
++Các lớp con kế thừa từ lớp abstract phải triển khai các phương thức trừu tượng này.
++Có thể chứa các phương thức thông thường, các phương thức này có thể có phần thân hàm (implementation) như bình thường.
++Có thể chứa các biến và hằng số, có thể được sử dụng trong các phương thức của lớp và các lớp con.
++Các lớp con kế thừa từ lớp abstract phải triển khai tất cả các phương thức trừu tượng: Khi một lớp con kế thừa từ lớp abstract,
+nó phải triển khai (implement) tất cả các phương thức trừu tượng được khai báo trong lớp abstract đó.
++Lớp abstract có thể được kế thừa từ lớp khác: Lớp abstract cũng có thể kế thừa từ một lớp khác,
+và các lớp con của nó sẽ kế thừa cả lớp abstract và lớp cha của nó.
+
+_Interface là gì
++Interface là một cấu trúc tương tự như lớp, nhưng chỉ chứa các hằng số và abstract method.
++Interface quy định các hành vi chung cho các lớp triển khai nó.
+
+_Các tính chất của Interface
++Định nghĩa một interface tạo ra một kiểu dữ liệu mới.
++Không thể tạo đối tượng của interface.
++Interface không thể triển khai interface thì cần triển khai tất cả các phương thức được khai báo trong interface đó.
++Interface có thể được thiết kế để khai báo các phương thức chung cho các lớp không liên quan với nhau.
++Interface bổ sung cho việc Java không hỗ trợ "đa kế thừa".
+
+_Khi nào dùng abstrac
++Khi cần sử dụng kế thừa.
++Cần cung cấp các phương thức mặc định và các phương thức nhiều lớp dẫn xuất có thể thực thi và ghi đè.
++Cần tạo nhiều phiên bản cho các thành phần
+
+_Khi nào dùng interface
++Khi cần cung cấp các chức năng chung cho các lớp không liên quan.
++Cần nhóm các đối tượng dựa trên các hành vi phổ biến.
++Cần sử dụng đa hình, vì 1 lớp có thể thực hiện nhiều interface.
