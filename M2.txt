@@ -196,3 +196,22 @@ _Khi nào dùng interface
 +Khi cần cung cấp các chức năng chung cho các lớp không liên quan.
 +Cần nhóm các đối tượng dựa trên các hành vi phổ biến.
 +Cần sử dụng đa hình, vì 1 lớp có thể thực hiện nhiều interface.
+
+----21/3/2023----
+_Comparable: là một interface được sử dụng để so sánh các đối tượng với chính nó, tức là các đối tượng cùng kiểu được so sánh với nhau.
+Interface này chỉ định một phương thức compareTo () để so sánh các đối tượng.
+
+_Comparator: là một interface được sử dụng để so sánh các đối tượng của các lớp khác nhau, tức là các đối tượng không cùng kiểu.
+Interface này chỉ định một phương thức compare () để so sánh các đối tượng.
+
+_Lớp Generic
++Một lớp có thể tham chiếu bất kỳ kiểu đối tượng nào được gọi là lớp generic.
++lớp generic cho phép ta tạo ra một lớp, interface hoặc phương thức có thể hoạt động với
+nhiều kiểu dữ liệu khác nhau
+
+_equals()
++khi so sánh hai đối tượng với nhau, java gọi phương thức equals() của chúng trả về true nếu 2 đối tượng bằng nhau
+hoặc false nếu 2 đối tượng khác nhau
++equals() được thiết kế để so sánh 2 đối tượng về mặt ngữ nghĩa, còn == là tham chiếu địa chỉ bộ nhớ
+
+----23/3/2023----
