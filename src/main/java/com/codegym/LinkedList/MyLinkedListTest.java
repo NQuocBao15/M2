@@ -2,7 +2,7 @@ package com.codegym.LinkedList;
 
 public class MyLinkedListTest {
     public static void main(String[] args) {
-        System.out.println("/=/=/=/= TESTING /=/=/=/=");
+        System.out.println("Test LinkedList");
         MyLinkedList ll = new MyLinkedList(10);
         ll.addFirst(11);
         ll.addFirst(12);
