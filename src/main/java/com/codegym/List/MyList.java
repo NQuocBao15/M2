@@ -23,6 +23,14 @@ public class MyList<E> {
             elements[size++] = e;
         }
 
+        public void remove(int index, int number){
+            for (int i = index; i < size - number; i++) {
+                elements[i] = elements[i + number];
+            }
+            elements[size-number] = null;
+            size = size-number;
+        }
+
         public E get(int i) {
             if (i>= size || i <0) {
                 throw new IndexOutOfBoundsException("Index: " + i + ", Size " + i );

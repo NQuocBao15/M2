@@ -214,4 +214,26 @@ _equals()
 hoặc false nếu 2 đối tượng khác nhau
 +equals() được thiết kế để so sánh 2 đối tượng về mặt ngữ nghĩa, còn == là tham chiếu địa chỉ bộ nhớ
 
-----23/3/2023----
+----24/3/2023----
+Lớp LinkedList lưu trữ các phần tử sử dụng cơ chế liên kết (link).
+LinkedList hoạt động dựa trên cơ chế liên kết giữa các Node.
+Mỗi node chứa dữ liệu của node đó và liên kết đến các node khác.
+
+LinkedList phù hợp với các bài toán cần thêm, xóa nhiều ở đầu danh sách và ít truy xuất ngẫu nhiên.
+vì linkedlist truy xuất ngẫu nhiên chậm nhưng thêm, xóa nhanh.
+
+Singly LinkedList (danh sách liên kết đơn):
+một node chỉ có một liên kết đến node phía sau nó.
+node cuối cùng trỏ đến null.
+
+Circular Singly LinkedList (danh sách liên kết đơn vòng):
+node cuối cùng trỏ đến node đầu tiên.
+
+Doubly LinkedList (danh sách liên kết đôi):
+một node chứa 2 liên kết trỏ đến phần tử đứng trước và sau nó.
+phần tử trước của phần tử đầu tiên là null.
+phần tử sau của phần tử sau là null.
+
+Circular Doubly LinkedList (danh sách liên kết đôi vòng);
+node đầu tiên và node cuối cùng có liên kết trỏ đến nhau.
+
