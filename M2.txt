@@ -237,3 +237,18 @@ phần tử sau của phần tử sau là null.
 Circular Doubly LinkedList (danh sách liên kết đôi vòng);
 node đầu tiên và node cuối cùng có liên kết trỏ đến nhau.
 
+----27/3/2023----
+Stack là một cấu trúc dữ liệu danh sách, việc thêm và lấy các phần tử được thực hiện
+theo quy tắc FILO (First-In/Last-Out).
++ stack
++ empty() : kiểm tra có rỗng hay không
++ peek() : trả về phần tử trên cùng của stack
++ pop() : trả về và xóa phần tử trên cùng của stack
++ push(o: E) : thêm một phần tử vào trên cùng của stack
+
+Queue là một cấu trúc dữ liệu danh sách, trong đó việc thêm và lấy các phần tử được thực hiện theo
+quy tắc FIFO (First-In/First-Out)
++ add() : thêm phần tử
++ poll() : lấy phần tử ở phần đầu của queue hoặc trả về null nếu rỗng
++ remove() : lấy và xóa phần tử ở phần đầu của queue và có ngoại lệ nếu rỗng
++ peek() : lấy phần tử ở phần đầu của queue hoặc trả null nếu rỗng
