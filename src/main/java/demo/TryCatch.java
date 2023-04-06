@@ -1,9 +1,10 @@
 package demo;
 
+import java.io.PrintWriter;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class TwoCatchBlocks {
+public class TryCatch {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
@@ -22,6 +23,8 @@ public class TwoCatchBlocks {
             System.out.println("Input error.");
         } catch (ArithmeticException e) {
             System.out.println("Arithmetic error.");
+        } catch (Exception e) {
+            System.out.println("Exception error.");
         } finally {
             System.out.println("Hello, this is finally");
         }
