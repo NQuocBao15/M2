@@ -252,3 +252,42 @@ quy tắc FIFO (First-In/First-Out)
 + poll() : lấy phần tử ở phần đầu của queue hoặc trả về null nếu rỗng
 + remove() : lấy và xóa phần tử ở phần đầu của queue và có ngoại lệ nếu rỗng
 + peek() : lấy phần tử ở phần đầu của queue hoặc trả null nếu rỗng
+
+
+----05/04/2023----
+Trong OOP có 4 khái niệm:
++ Tính kế thừa: cho phép một lớp con kế thừa các thuộc tính và phương thức của một lớp cha và mở rộng chúng hoặc ghi đè lên chúng.
++ Tính đa hình cho phép các đối tượng của các lớp khác nhau có thể được xử lý bằng cách sử dụng cùng 1 phương thức với cùng 1 tên, nhưng có thể thực hiện khác nhau tùy thuộc vào lớp của đối tượng đó.
++ Tính đóng gói cho phép ẩn giấu thông tin bên trong các đối tượng và chỉ cho phép truy cập thông qua các phương thức công khai.
++ Tính trừu tượng cho phép ta tập trung vào các khía cạnh quan trọng của đối tượng mà không cần quan tâm đến các chi tiết bên trong.
+
+Nguyên lí SOLID
+1. Single Responsibility Principle
++ nghĩa là một class chỉ nên giữ 1 trách nhiệm duy nhất (chỉ có thể sửa đổi class với một lí do duy nhất)
+2. Open/Closed Principle
++ có thể thoải mái mở rộng 1 class, nhưng không thể sửa đổi bên trong class đó.
+3. Liskov Substitution Principle
++ Trong một chương trình, các object của class con có thể thay thế class cha mà không làm thay đổi tính đúng đắn của chương trình.
+4. Interface Segregation Principle
++ Thay vì dùng một interface lớn, ta nên tách thành nhiều interface nhỏ, với nhiều mục đích cụ thể.
+5. Dependency Inversion Principle
++ Các module cấp cao không nên phụ thuộc vào các modules cấp thấp. Cả 2 nên phụ thuộc vào abstraction.
++ Interface (abstraction) không nên phụ thuộc vào chi tiết, mà ngược lại.(Các class giao tiếp với nhau thông qua interface, không phải thông qua implementation).
+
+Ngoại lệ là gì?
++ Ngoại lệ là các lỗi phát sinh trong quá trình thực thi
+_Có 2 loại ngoại lệ:
++ Checked Exceptions là lỗi được phát sinh trong tình huống chạy chương trình thông thường.
+Những Exception này cần được xử lý để tránh biên dịch lỗi. Những lỗi này được kiểm tra trong quá trình biên dịch.
++ Unchecked Exceptions được tạo ra trong tình huống được coi là "không thể cứu vãn" cho một chương trình (được tạo ra trong lúc đã chạy chương trình).
+Những ngoại lệ này không nhất thiết phải được kiểm tra trong một ứng dụng.
+
+Xử lý ngoại lệ trong Java
++ Sử dụng khối try-catch để tách phần giải quyết lỗi ra khỏi phần có thể sinh lỗi, quy định các loại ngoại lệ được bắt tại mức thực thi hiện hành.
+  Phương thức được gọi thành công và khối try được thực thi đầy đủ cho đến lệnh cuối cùng, còn khối catch bị bỏ qua vì không có ngoại lệ nào phải xử lý.
++ Sử dụng finnaly là khối mà sẽ luôn luôn thực thi vô điều kiện sau try/catch
++ Sử dụng từ khóa throw và throws throw được dùng khi cần phát sinh ngoại lệ trong một phương thức.
+  Từ khóa throws được dùng với phương thức để gây ra bất cứ checked hay unchecked exception nào và đồng thời nhường công việc xử lý ngoại lệ đó cho người gọi phương thức này.
+  Ngoại trừ những Error hoặc RuntimeException và các subclasses của chúng, sử dụng throws là cần thiết cho tất cả các ngoại lệ.
++ Sử dụng lệnh throw để ném các lỗi Runtime Error có sẵn hoặc các lỗi do người dùng tự định nghĩ. Sau đó các lỗi này có thể được bắt và bạn có thể thực hiện một hành động hợp lý.
++ Sử dụng nhiều khối catch : khối mã try có thể có nhiều ngoại lệ xảy ra. Sử dụng nhiều khối catch để bắt và xử lý chi tiết các ngoại lệ đó.
