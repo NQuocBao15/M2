@@ -9,7 +9,7 @@ public class ReadAndWriteFile {
         ReadAndWriteFile readAndWriteFile = new ReadAndWriteFile();
         List<Integer> numbers = readAndWriteFile.readFile("numbers.txt");
         int maxValue = findMax(numbers);
-        readAndWriteFile.writit iteFile("result.txt", maxValue);
+        readAndWriteFile.writeFile("result.txt", maxValue);
     }
 
     public List<Integer> readFile(String filePath) {
