@@ -1,4 +1,4 @@
-package demo;
+package demo.Exception;
 
 public class ThrowException {
     private int numerator, denominator;

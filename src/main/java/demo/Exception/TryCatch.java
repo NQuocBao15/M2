@@ -1,4 +1,4 @@
-package demo;
+package demo.Exception;
 
 import java.io.PrintWriter;
 import java.util.InputMismatchException;

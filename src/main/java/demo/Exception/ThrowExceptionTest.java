@@ -1,4 +1,4 @@
-package demo;
+package demo.Exception;
 
 public class ThrowExceptionTest {
     public static void main(String[] args) {
