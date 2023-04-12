@@ -1,4 +1,4 @@
-package com.codegym.List;
+package com.codegym.list;
 
 public class MyListTest {
     public static void main(String[] args) {

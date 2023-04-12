@@ -1,4 +1,4 @@
-package demo.Multithreading;
+package demo.multithreading;
 
 public class WithdrawTask implements Runnable {
     private Account acct;

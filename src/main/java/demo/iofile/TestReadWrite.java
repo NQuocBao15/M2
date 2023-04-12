@@ -1,4 +1,4 @@
-package demo.IOFile;
+package demo.iofile;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package com.codegym.LinkedList;
+package com.codegym.linkedlist;
 
 public class MyLinkedList {
     private Node head;

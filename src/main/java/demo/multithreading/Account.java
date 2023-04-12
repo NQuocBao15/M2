@@ -1,4 +1,4 @@
-package demo.Multithreading;
+package demo.multithreading;
 
 public class Account {
     private String name;

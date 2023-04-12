@@ -1,4 +1,4 @@
-package com.codegym.List;
+package com.codegym.list;
 
 import java.util.Arrays;
 

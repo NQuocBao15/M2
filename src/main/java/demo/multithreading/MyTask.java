@@ -1,4 +1,4 @@
-package demo.Multithreading;
+package demo.multithreading;
 
 public class MyTask extends Thread {
     private int times;

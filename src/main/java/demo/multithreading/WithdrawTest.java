@@ -1,4 +1,4 @@
-package demo.Multithreading;
+package demo.multithreading;
 
 public class WithdrawTest {
     public static void main(String[] args) {

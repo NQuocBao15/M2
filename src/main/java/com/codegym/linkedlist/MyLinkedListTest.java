@@ -1,4 +1,4 @@
-package com.codegym.LinkedList;
+package com.codegym.linkedlist;
 
 public class MyLinkedListTest {
     public static void main(String[] args) {
