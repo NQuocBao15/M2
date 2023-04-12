@@ -5,51 +5,42 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ReadAndWriteFile {
-    public static void main(String[] args) {
-        ReadAndWriteFile readAndWriteFile = new ReadAndWriteFile();
-        List<Integer> numbers = readAndWriteFile.readFile("numbers.txt");
-        int maxValue = findMax(numbers);
-        readAndWriteFile.writeFile("result.txt", maxValue);
-    }
 
-    public List<Integer> readFile(String filePath) {
-        List<Integer> numbers = new ArrayList<>();
+    public List<String> readFile(String filepath) {
+        List<String> list = new ArrayList<>();
         try {
-            File file = new File(filePath);
+            File file = new File(filepath);
 
             if (!file.exists()) {
                 throw new FileNotFoundException();
             }
+
             BufferedReader br = new BufferedReader(new FileReader(file));
             String line = "";
             while ((line = br.readLine()) != null) {
-                numbers.add(Integer.parseInt(line));
+                list.add(line);
             }
             br.close();
         } catch (Exception e) {
-            System.err.println("File not exist or error");
+            System.err.println("File không tồn tại hoặc nội dung có lỗi!");
         }
-        return numbers;
+        return list;
     }
 
-    public void writeFile(String filePath, int max) {
+    public void writeFile(String filePath, List<String> list) {
         try {
             FileWriter writer = new FileWriter(filePath, true);
             BufferedWriter bufferedWriter = new BufferedWriter(writer);
-            bufferedWriter.write("Gia tri lon nhat la: " + max);
+            for (int i = 0; i < list.size(); i++) {
+                bufferedWriter.write("\n" + list.get(i));
+            }
             bufferedWriter.close();
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
-    public static int findMax(List<Integer> numbers) {
-        int max = numbers.get(0);
-        for (int i = 0; i < numbers.size(); i++) {
-            if (max < numbers.get(i)) {
-                max = numbers.get(i);
-            }
-        }
-        return max;
-    }
+
+
+
 }
