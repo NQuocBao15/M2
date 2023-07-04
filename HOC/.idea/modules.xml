@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Abstract_Interface/Abstract_Interface.iml" filepath="$PROJECT_DIR$/Abstract_Interface/Abstract_Interface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/BaiTap/BaiTap.iml" filepath="$PROJECT_DIR$/BaiTap/BaiTap.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CRUDUser.iml" filepath="$PROJECT_DIR$/CRUDUser.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/HOC.iml" filepath="$PROJECT_DIR$/.idea/HOC.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TaiXiuTime/TaiXiuTime.iml" filepath="$PROJECT_DIR$/TaiXiuTime/TaiXiuTime.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ThiThucHanhM2/ThiThucHanhM2.iml" filepath="$PROJECT_DIR$/ThiThucHanhM2/ThiThucHanhM2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/QLSV/quanlisinhvien/quanlisinhvien.iml" filepath="$PROJECT_DIR$/QLSV/quanlisinhvien/quanlisinhvien.iml" />
+    </modules>
+  </component>
+</project>

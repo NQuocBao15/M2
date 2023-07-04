@@ -1,0 +1,65 @@
+Access modifier trong Java là từ khóa được sử dụng để quản lý việc truy cập đến các thành phần của một lớp, gồm các biến, phương thức và lớp con. Có 4 loại access modifier trong Java:
+
+public: cho phép truy cập từ mọi nơi, bao gồm cả từ bên ngoài lớp.
+private: chỉ cho phép truy cập từ bên trong lớp đó.
+protected: cho phép truy cập từ bên trong lớp đó và các lớp con của nó.
+default (không có từ khóa nào): cho phép truy cập từ bên trong cùng package.
+Việc sử dụng access modifier giúp tăng tính bảo mật và quản lý code của chương trình, đồng thời giúp đảm bảo tính đúng đắn và an toàn của code.
+
+_Biến static
++Được gọi là biến tĩnh
++Được sử dụng để tham chiếu thuộc tính chung của tất cả đối tượng thuộc một lớp(mà không là duy nhất cho mỗi đối tượng)
++Biến static lấy bộ nhớ chỉ một lần trong Class Area tại thời gian tải lớp đó
++Biến static giúp tiết kiệm bộ nhớ
+
+VD:
+public class Student {
+    private static String name = "Nguyen Van A";
+
+    private static int age = 21;
+
+    public static void main(String args[]) {
+        System.out.println("Ten : " + name);
+
+        System.out.println("Tuoi : " + Student.age);
+    }
+}
+
+
+_Tính kế thừa: cho phép một lớp con kế thừa các thuộc tính và phương thức của một lớp cha và mở rộng chúng hoặc ghi đè lên chúng.
+_VD:
+class Employee {
+    float salary = 1000;
+}
+class Programmer extends Employee {
+    int bonus = 150;
+}
+public class Vidu {
+    public static void main(String[] args) {
+        Programmer p = new Programmer();
+        System.out.println("Programmer salary is: " + p.salary);
+        System.out.println("Bonus of Programmer is: " + p.bonus);
+    }
+}
+
+_Tính đa hình trong kế thừa: là khả năng của một đối tượng của một lớp kế thừa (subclass) để
+thể hiện một cách khác nhau các phương thức được kế thừa từ lớp cha (superclass) của nó.
+_Nó cho phép một đối tượng của một lớp con có thể được truy cập và sử dụng như một đối tượng
+của lớp cha, hoặc như một đối tượng của lớp con của lớp cha đó.
+
+
+
+_Override là 1 tính năng cho phép lớp con ghi đè phương thức của lớp cha.
+Nếu 1 phương thức của lớp cha được ghi đè trong lớp con, và khi gọi phương thức đó ở
+lớp con thì phương thức ở lớp con sẽ được gọi thay vì pthức của lớp cha.
+_Một số đặc điểm của overriding trong Java bao gồm:
++Overriding cho phép lớp con cung cấp một triển khai khác cho phương thức đã được định nghĩa trong lớp cha.
++Phương thức ở lớp con phải có cùng tên, danh sách tham số và kiểu trả về như phương thức trong lớp cha.
++Phương thức ở lớp con không được phép có kiểu trả về khác với kiểu trả về của phương thức ở lớp cha.
++Phương thức ở lớp con không được phép có phạm vi truy cập thấp hơn phạm vi truy cập của phương thức ở lớp cha.
+
+
+_Biến final: bạn không thể thay đổi giá trị của biến final (nó sẽ là hằng số).
+_Phương thức final: bạn không thể ghi đè phương thức final.
+_Lớp final: bạn không thể kế thừa lớp final.
+_Biến static final trống: Một biến final mà khôg được khởi tạo tại thời điểm khai báo được gọi là biến final trống.
